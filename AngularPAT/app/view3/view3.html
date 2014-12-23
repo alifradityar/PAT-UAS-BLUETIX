@@ -1,0 +1,29 @@
+<div class="content">
+	<p>
+		Terima kasih telah memesan melalui BluTix, silahkan cetak bukti reservasi anda.
+	</p>
+	<br>
+	<div class="struk">
+		<p> DATA CLIENT </p>
+		<p> ----------------------------------------- </p>
+		<p> NAMA LENGKAP&nbsp;: {{dataPenumpang.nama}}</p>
+		<p> EMAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenumpang.email}}</p>
+		<p> NO. HP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenumpang.hp}}</p>
+		<br>
+		<p> DATA RESERVASI </p>
+		<p> ----------------------------------------- </p>
+		<p> ID PESAWAT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenerbangan.id_penerbangan}}</p>
+		<p> MASKAPAI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenerbangan.id_pesawat}}</p>
+		<p> BANDARA ASAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenerbangan.keberangkatan}}</p>
+		<p> BANDARA TUJUAN&nbsp;&nbsp;&nbsp;: {{dataPenerbangan.kedatangan}}</p>
+		<p> HARI BERANGKAT&nbsp;&nbsp;&nbsp;: {{dataPenerbangan.tgl_berangkat}}</p>
+		<p> KEBERANGKATAN&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenerbangan.wkt_berangkat}}</p>
+		<p> KEDATANGAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenerbangan.wkt_sampai}}</p>
+		<p> BAGASI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenumpang.bagasi}} Kg</p>
+		<p> CEMILAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{dataPenumpang.cemilan}}</p>
+		<p> PERMINTAAN KHUSUS: {{dataPenumpang.permintaan}}</p>
+	</div>
+	<br>
+	<br>
+	<button type="submit" class="btn btn-primary">Cetak</button>
+</div>

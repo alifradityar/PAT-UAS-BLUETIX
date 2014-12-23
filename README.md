@@ -13,3 +13,6 @@ Instruction
 
 Testing
 ----------------
+1. Please open the url "localhost:3000/schedule/init" to initialized the dummy data
+2. The dummy data only provide sample with source "CGK" to any Destionation (except CGK of course)
+3. The dummy data only provide sample with date 23/12/2014

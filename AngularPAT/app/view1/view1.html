@@ -1,0 +1,55 @@
+<div class="content">
+	<form class="form-horizontal" role="form">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Asal Penerbangan</label>
+	    <div class="col-sm-5">
+	     <select class="form-control" ng-model="asal" ng-options="bandara as bandara.name for bandara in stringBandara">
+		</select>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Tujuan Penerbangan</label>
+	    <div class="col-sm-5">
+	     <select class="form-control" ng-model="tujuan" ng-options="bandara as bandara.name for bandara in stringBandara">
+		</select>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Tanggal Keberangkatan</label>
+	    <div class="col-sm-5">
+	      <input ng-model="tgl" type="text" class="form-control" id="inputEmail3" placeholder="DD/MM/YYYY">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button class="btn btn-default" ng-click="search()" >Search</button>
+	    </div>
+	  </div>
+	</form>
+	<hr>
+	<div class="result">
+	<h4>{{ resultCount }} Result Found</h4>
+	<table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Maskapai</th>
+          <th>Pesawat</th>
+          <th>Pergi</th>
+          <th>Tiba</th>
+          <th>Harga</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="sch in searchResult">
+          <td>{{sch.maskapai}}</td>
+          <td>{{sch.id_penerbangan}}</td>
+          <td class="table-time" >{{sch.wkt_berangkat}}</td>
+          <td class="table-time" >{{sch.wkt_sampai}}</td>
+          <td class="price-time" >{{sch.harga}}</td>
+          <td><button type="button" class="btn btn-primary" ng-click="select( sch.id_penerbangan );">Reserve Now!</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</div>
